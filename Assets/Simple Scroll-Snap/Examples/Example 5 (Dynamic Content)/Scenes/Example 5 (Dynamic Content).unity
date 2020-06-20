@@ -2207,7 +2207,7 @@ MonoBehaviour:
   rightMargin: 25
   topMargin: 25
   bottomMargin: 25
-  infinitelyScroll: 0
+  infinitelyScroll: 1
   infiniteScrollingEndSpacing: 0
   startingPanel: 0
   swipeGestures: 1
