@@ -14,12 +14,9 @@ public static class TextureExtension
     public static void FloodFillArea(this Sprite aTex, int aX, int aY, Color aFillColor)
     {
 
-        //int w = aTex.width;
         int w = aTex.texture.width;
-        //int h = aTex.height;
         int h= aTex.texture.height;
 
-        //Color[] colors = aTex.GetPixels();
         Color[] colors = aTex.texture.GetPixels();
 
         Color refCol = colors[aX + aY * w];
@@ -69,16 +66,13 @@ public static class TextureExtension
         }
 
         aTex.texture.SetPixels(colors);
-        //aTex.SetPixels(colors);
     }
 
     public static void FloodFillBorder(this Sprite aTex, int aX, int aY, Color aFillColor, Color aBorderColor)
     {
-        //int w = aTex.width;
         int w = aTex.texture.width;
-        //int h = aTex.height;
         int h = aTex.texture.height;
-        //Color[] colors = aTex.GetPixels();
+
         Color[] colors = aTex.texture.GetPixels();
 
         byte[] checkedPixels = new byte[colors.Length];
@@ -124,7 +118,7 @@ public static class TextureExtension
                 }
             }
         }
-        //aTex.SetPixels(colors);
+        
         aTex.texture.SetPixels(colors);
     }
 }
