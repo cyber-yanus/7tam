@@ -26,7 +26,6 @@ public class LineRescaleChild : MonoBehaviour
         float h = rect.height;
 
         childrenRescale(h);
-
     }
 
 

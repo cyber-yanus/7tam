@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class ColumnRescaleChild : MonoBehaviour
 {
     public GameObject exampleParent;
-    public GameObject exampleChildrenContent;
 
     RectTransform rectTransform;
     GridLayoutGroup gridLayout;
@@ -12,9 +11,6 @@ public class ColumnRescaleChild : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
-
         rectTransform = exampleParent.GetComponent<RectTransform>();
         gridLayout = GetComponent<GridLayoutGroup>();
 
@@ -24,7 +20,6 @@ public class ColumnRescaleChild : MonoBehaviour
         float h = rectTransform.rect.height / childCount;
 
         childrenRescale(w, h);
-        lol(h);
 
         Debug.Log("column height = " + h);
         Debug.Log("column width = " + w);
@@ -36,20 +31,4 @@ public class ColumnRescaleChild : MonoBehaviour
 
     }
 
-
-    private void lol(float h)
-    {
-        float childContentHeight = h - 40f;
-
-        gridLayout = exampleChildrenContent.GetComponent<GridLayoutGroup>();
-
-        gridLayout.cellSize = new Vector2(childContentHeight, childContentHeight);
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
