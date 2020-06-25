@@ -7,31 +7,28 @@ public class ButtonColorCreator : MonoBehaviour
 {
     public Sprite spriteButton;
     public Font fontForTextNumberColor;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //create();
-    }
-
+    public PlayerScriptableObject player;
 
     public void create(List<Color> colors)
     {
         for (int i = 0; i < colors.Count; i++)
         {
-            GameObject colorButton = new GameObject("color button", typeof(Button), typeof(Image));
+            GameObject colorButton = new GameObject("color button", typeof(Button), typeof(Image), typeof(ColorButtonListner));
             colorButton.transform.localScale = new Vector3(0.005f, 0.005f, 0.005f);
 
             Image buttonImage = colorButton.GetComponent<Image>();
             buttonImage.sprite = spriteButton;
             buttonImage.color = colors[i];
 
+            ColorButtonListner colorButtonListner = colorButton.GetComponent<ColorButtonListner>();
+            colorButtonListner.player = player;
+
             colorButton.transform.SetParent(transform);
+
+            GetComponent<ButtonsColorController>().addColorButton(colorButton);
 
             createTextNumberColor(i + 1, colorButton);
         }
-
 
     }
 

@@ -12,10 +12,15 @@ public class ColoringBookData : ScriptableObject
     private GameObject coloringBookPrefab;
 
     [SerializeField]
+    private Sprite example;
+
+
+    [SerializeField]
     private List<Color> colors;
 
+    
     public GameObject ColoringBookPrefab { get => coloringBookPrefab; set => coloringBookPrefab = value; }
     public Sprite ColoringBookSprite { get => coloringBookSprite; set => coloringBookSprite = value; }
     public List<Color> Colors { get => colors; set => colors = value; }
-    
+    public Sprite Example { get => example; set => example = value; }
 }

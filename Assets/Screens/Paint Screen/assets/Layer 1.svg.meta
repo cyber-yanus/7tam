@@ -12,7 +12,7 @@ ScriptedImporter:
   texturedSpriteMeshType: 0
   svgPixelsPerUnit: 100
   gradientResolution: 64
-  alignment: 10
+  alignment: 0
   customPivot: {x: 0, y: 0}
   generatePhysicsShape: 0
   viewportOptions: 2
@@ -28,7 +28,7 @@ ScriptedImporter:
   maxTangentAngleEnabled: 0
   maxTangentAngle: 5
   keepTextureAspectRatio: 1
-  textureSize: 600
+  textureSize: 1000
   textureWidth: 256
   textureHeight: 256
   wrapMode: 0

@@ -23,6 +23,7 @@ public class ColoringBookLoader : MonoBehaviour
     private void loadColoringImage()
     {
         coloringImage.sprite = currentColoringBook.ColoringBook.ColoringBookSprite;
+        coloringImage.GetComponent<Paint>().example = currentColoringBook.ColoringBook.Example;
     }
 
     private void loadColoringBookPrefab()
