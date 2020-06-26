@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1636de1692f17ca48b3c0b0b63a6491d, type: 3}
   m_Name: currentColoringBook
   m_EditorClassIdentifier: 
-  coloringBook: {fileID: 0}
+  coloringBook: {fileID: 11400000, guid: a32a82699dfae384bb6b6752f47c58dc, type: 2}

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: new player
   m_EditorClassIdentifier: 
   currentColor: {r: 0, g: 0, b: 0, a: 0}
+  money: 20000

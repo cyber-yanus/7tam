@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class ColoringBookLoader : MonoBehaviour
 {
@@ -10,13 +9,10 @@ public class ColoringBookLoader : MonoBehaviour
 
     public CurrentColoringBook currentColoringBook;
 
-                    
-
-    // Start is called before the first frame update
+ 
     void Start()
     {
         loadColoringImage();
-        //loadColoringBookPrefab();
         loadColors();
     }
 
@@ -26,26 +22,14 @@ public class ColoringBookLoader : MonoBehaviour
         coloringImage.GetComponent<Paint>().example = currentColoringBook.ColoringBook.Example;
     }
 
-    private void loadColoringBookPrefab()
-    {
-        GameObject coloringBookPrefab = currentColoringBook.ColoringBook.ColoringBookPrefab;
-
-        Instantiate(coloringBookPrefab);
-    }
-
     private void loadColors()
     {
         List<Color> colors = currentColoringBook.ColoringBook.Colors;
+        List<int> colorsNumber = currentColoringBook.ColoringBook.ColorsCount;
 
         ButtonColorCreator buttonColorCreator = colorContentList.GetComponent<ButtonColorCreator>();
 
-        buttonColorCreator.create(colors);
+        buttonColorCreator.create(colors, colorsNumber);
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

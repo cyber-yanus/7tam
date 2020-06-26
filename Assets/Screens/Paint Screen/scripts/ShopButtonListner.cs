@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class ExitButtonListner : MonoBehaviour
+public class ShopButtonListner : MonoBehaviour
 {
     private Button button;
+
+    //public CurrentColoringBook currentColoringBook;
+    //public ColoringBookData coloringBook;
 
     // Start is called before the first frame update
     void Start()
@@ -13,9 +16,10 @@ public class ExitButtonListner : MonoBehaviour
         button.onClick.AddListener(execute);
     }
 
-
     private void execute()
     {
-        SceneLoader.loadNewScene("Main");
+        //currentColoringBook.ColoringBook = coloringBook
+
+        SceneLoader.loadNewScene("Shop");
     }
 }

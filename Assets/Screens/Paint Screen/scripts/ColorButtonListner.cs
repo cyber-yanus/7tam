@@ -19,7 +19,9 @@ public class ColorButtonListner : MonoBehaviour
     {
         player.CurrentColor = GetComponent<Image>().color;
 
-        transform.parent.GetComponent<ButtonsColorController>().selectButton(this.gameObject);
+        transform.parent.parent.GetComponent<ButtonsColorController>().selectButton(this.gameObject);
+
+
     }
 
 

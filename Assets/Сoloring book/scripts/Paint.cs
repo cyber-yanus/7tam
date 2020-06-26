@@ -5,6 +5,7 @@ public class Paint : MonoBehaviour, IPointerClickHandler
 {
     public GameObject mainCanvas;
     public GameObject topPanel;
+    public GameObject colorContent;
     public Sprite example;
    
 
@@ -69,9 +70,19 @@ public class Paint : MonoBehaviour, IPointerClickHandler
         Color color = player.CurrentColor;
 
         if (rescaleY > 0 && rescaleY < localHeight)
-            if(rescaleX > 0 && rescaleX < localWidth)
+        {
+            if (rescaleX > 0 && rescaleX < localWidth)
+            {
                 if (checkingForCompliance(rescaleX, rescaleY))
-                paintArea(rescaleX, rescaleY, color);
+                {
+                    colorContent.GetComponent<ButtonsColorController>().upProgressBar();
+
+                    paintArea(rescaleX, rescaleY, color);
+                }
+            }
+        }
+
+
     }
 
     private bool checkingForCompliance(float aX, float aY)

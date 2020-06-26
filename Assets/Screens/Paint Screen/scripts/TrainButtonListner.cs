@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
-public class ExitButtonListner : MonoBehaviour
+public class TrainButtonListner : MonoBehaviour
 {
     private Button button;
+    public GameObject trainGameObject;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +19,8 @@ public class ExitButtonListner : MonoBehaviour
 
     private void execute()
     {
-        SceneLoader.loadNewScene("Main");
+        trainGameObject.SetActive(true);
     }
+
+
 }
