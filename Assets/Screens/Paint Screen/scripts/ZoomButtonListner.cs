@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DanielLochner.Assets.SimpleScrollSnap;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ZoomButtonListner : MonoBehaviour
@@ -25,6 +26,8 @@ public class ZoomButtonListner : MonoBehaviour
 
             PlayerPrefs.SetString(saveName, "yes");
 
+
+            trainGameObject.GetComponent<SimpleScrollSnap>().startingPanel = 2;
             trainGameObject.SetActive(true);
         }
 

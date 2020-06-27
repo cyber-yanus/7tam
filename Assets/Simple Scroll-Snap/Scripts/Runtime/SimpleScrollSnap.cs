@@ -295,6 +295,7 @@ namespace DanielLochner.Assets.SimpleScrollSnap
                     if (canvasScaler != null && canvas.renderMode != RenderMode.WorldSpace)
                     {
                         scaledContentSize /= canvasRectTransform.localScale;
+
                     }
                 }
             }
@@ -459,10 +460,12 @@ namespace DanielLochner.Assets.SimpleScrollSnap
                         if (displacementFromCenter.x > scaledContentSize.x / 2f)
                         {
                             PanelsRT[i].anchoredPosition -= new Vector2(contentSize.x, 0);
+                            
                         }
                         else if (displacementFromCenter.x < -1f * scaledContentSize.x / 2f)
                         {
                             PanelsRT[i].anchoredPosition += new Vector2(contentSize.x, 0);
+                            
                         }
                     }
                 }
@@ -482,7 +485,10 @@ namespace DanielLochner.Assets.SimpleScrollSnap
                     }
                 }
             }
+
+
         }
+
         private void OnTransitionEffects()
         {
             if (transitionEffects.Count == 0) return;

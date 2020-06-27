@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DanielLochner.Assets.SimpleScrollSnap;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,6 +33,7 @@ public class MagicStickButtonListner : MonoBehaviour
 
             PlayerPrefs.SetString(saveName, "yes");
 
+            trainGameObject.GetComponent<SimpleScrollSnap>().startingPanel = 0;
             trainGameObject.SetActive(true);
         }
 

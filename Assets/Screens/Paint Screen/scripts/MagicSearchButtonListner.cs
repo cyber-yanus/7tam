@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DanielLochner.Assets.SimpleScrollSnap;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,6 +31,7 @@ public class MagicSearchButtonListner : MonoBehaviour
 
             PlayerPrefs.SetString(saveName, "yes");
 
+            trainGameObject.GetComponent<SimpleScrollSnap>().startingPanel = 1;
             trainGameObject.SetActive(true);
         }
 
