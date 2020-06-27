@@ -1,5 +1,6 @@
 ﻿using DanielLochner.Assets.SimpleScrollSnap;
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,8 +14,10 @@ public class MagicStickButtonListner : MonoBehaviour
     public Text textWithCost;
 
     public PlayerScriptableObject player;
+    public GameObject coloringBook;
+    public CurrentColoringBook currentColoringBook;
 
-   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +49,24 @@ public class MagicStickButtonListner : MonoBehaviour
 
     private void actiavteMagicStick()
     {
+
+        if (player.CurrentColor != null)
+        {
+            Debug.Log(currentColoringBook.StartPoints[player.CurrentColorId].points.Length);
+
+            foreach (Vector2 startPoints in currentColoringBook.StartPoints[player.CurrentColorId].points)
+            {
+                int newX = (int)startPoints.x;
+                int newY = (int)startPoints.y;
+
+                if (newX != 0)
+                    coloringBook.GetComponent<Paint>().magicStickPaintArea(newX, newY, player.CurrentColor);
+            }
+
+        }
+
         Debug.Log("activate magic stick");
     }
+
 
 }

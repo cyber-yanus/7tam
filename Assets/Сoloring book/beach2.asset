@@ -12,9 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d15c02e8e5fdbd94c812cbf43ee2515f, type: 3}
   m_Name: beach2
   m_EditorClassIdentifier: 
-  coloringBookSprite: {fileID: 21300000, guid: 2d31f732b83a93046a86027345f79257, type: 3}
-  coloringBookPrefab: {fileID: 0}
-  example: {fileID: 0}
-  colors: []
-  colorsCount: 
+  coloringBookSprite: {fileID: 3286163911610860551, guid: 4bfdf811f31effc46a4de266c3218b65,
+    type: 3}
+  textColoringBook: {fileID: 21300000, guid: 740c097256b3e8546b6e428dfd7818f6, type: 3}
+  example: {fileID: 21300000, guid: 53f72102934e4b54bb6fa11a1acd0aa7, type: 3}
+  colors:
+  - {r: 0.7647059, g: 0.7647059, b: 0.7647059, a: 1}
+  - {r: 0.54901963, g: 1, b: 0.9843137, a: 1}
+  - {r: 1, g: 0.9490196, b: 0, a: 1}
+  - {r: 0.9254902, g: 0.10980392, b: 0.14117648, a: 1}
+  - {r: 0.24705882, g: 0.28235295, b: 0.8, a: 1}
+  - {r: 0.34509805, g: 0.34509805, b: 0.34509805, a: 1}
+  - {r: 1, g: 0.68235296, b: 0.78431374, a: 1}
+  colorsCount: 160000002a0000000500000002000000310000000700000006000000
   savedProgressBarCount: []

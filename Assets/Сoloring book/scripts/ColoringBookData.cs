@@ -10,11 +10,11 @@ public class ColoringBookData : ScriptableObject
     private Sprite coloringBookSprite;
 
     [SerializeField]
-    private GameObject coloringBookPrefab;
+    private Sprite textColoringBook;
 
     [SerializeField]
     private Sprite example;
-
+    
     [SerializeField]
     private List<Color> colors;
 
@@ -26,7 +26,7 @@ public class ColoringBookData : ScriptableObject
 
 
     public List<float> SavedProgressBarCount { get => savedProgressBarCount; set => savedProgressBarCount = value; }
-    public GameObject ColoringBookPrefab { get => coloringBookPrefab; set => coloringBookPrefab = value; }
+    public Sprite TextColoringBook { get => textColoringBook; set => textColoringBook = value; }
     public Sprite ColoringBookSprite { get => coloringBookSprite; set => coloringBookSprite = value; }
     public List<int> ColorsCount { get => colorsCount; set => colorsCount = value; }
     public List<Color> Colors { get => colors; set => colors = value; }

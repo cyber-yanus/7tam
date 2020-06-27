@@ -43,6 +43,7 @@ public class ButtonColorCreator : MonoBehaviour
 
             ColorButtonListner colorButtonListner = colorButton.GetComponent<ColorButtonListner>();
             colorButtonListner.player = player;
+            colorButtonListner.Id = i;
 
             colorButton.transform.SetParent(buttonParent.transform);
 

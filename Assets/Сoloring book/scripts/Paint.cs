@@ -53,9 +53,19 @@ public class Paint : MonoBehaviour, IPointerClickHandler
 
     }
 
-    private void paintArea(float x, float y, Color color)
+    public void paintArea(float x, float y, Color color)
     {
         svg.sprite.FloodFillArea((int)x, (int)y, color);
+        svg.sprite.texture.Apply();
+    }
+
+    public void magicStickPaintArea(float x, float y, Color color)
+    {
+        
+        int newX = (int)x;//localWidth - (int)x;
+        int newY = (int)localHeight - (int)y;
+
+        svg.sprite.FloodFillArea(newX, newY, color);
         svg.sprite.texture.Apply();
     }
 

@@ -6,6 +6,8 @@ public class PlayerScriptableObject : ScriptableObject
 {
     [SerializeField]
     private Color currentColor;
+    [SerializeField]
+    private int currentColorId;
 
     [SerializeField]
     private int money;
@@ -23,4 +25,5 @@ public class PlayerScriptableObject : ScriptableObject
 
     public Color CurrentColor { get => currentColor; set => currentColor = value; }
     public int Money { get => money; set => money = value; }
+    public int CurrentColorId { get => currentColorId; set => currentColorId = value; }
 }

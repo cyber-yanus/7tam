@@ -1570,6 +1570,7 @@ GameObject:
   - component: {fileID: 614641773}
   - component: {fileID: 614641774}
   - component: {fileID: 614641775}
+  - component: {fileID: 614641776}
   m_Layer: 5
   m_Name: coloring book
   m_TagString: Untagged
@@ -1738,6 +1739,21 @@ MonoBehaviour:
   coloringBook: {fileID: 11400000, guid: 72728d0d3f07a4249b5c1e20c19cc623, type: 2}
   currentColoringBook: {fileID: 11400000, guid: 905030ead48248f4280aa400e7cb1a03,
     type: 2}
+--- !u!114 &614641776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614641768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c813fa1e1f38fc643aba7c7cd1bebfe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartPoints: []
+  savePath: 
+  saveFileName: points.json
 --- !u!1 &683763652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,6 +2029,7 @@ GameObject:
   - component: {fileID: 743256999}
   - component: {fileID: 743256998}
   - component: {fileID: 743257003}
+  - component: {fileID: 743257004}
   m_Layer: 5
   m_Name: coloring book
   m_TagString: Untagged
@@ -2181,6 +2198,21 @@ MonoBehaviour:
   coloringBook: {fileID: 11400000, guid: a32a82699dfae384bb6b6752f47c58dc, type: 2}
   currentColoringBook: {fileID: 11400000, guid: 905030ead48248f4280aa400e7cb1a03,
     type: 2}
+--- !u!114 &743257004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743256996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c813fa1e1f38fc643aba7c7cd1bebfe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartPoints: []
+  savePath: 
+  saveFileName: points.json
 --- !u!1 &760380786
 GameObject:
   m_ObjectHideFlags: 0
@@ -3782,7 +3814,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2d31f732b83a93046a86027345f79257, type: 3}
+  m_Sprite: {fileID: 3286163911610860551, guid: 4bfdf811f31effc46a4de266c3218b65,
+    type: 3}
   m_PreserveAspect: 1
 --- !u!222 &1583291325
 CanvasRenderer:
@@ -5159,6 +5192,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottom Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633809332527589489, guid: aa8fbfce6f98c384593b25b36e670086,
+        type: 3}
+      propertyPath: isMainScene
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa8fbfce6f98c384593b25b36e670086, type: 3}

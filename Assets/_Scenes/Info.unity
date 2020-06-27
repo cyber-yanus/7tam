@@ -1043,6 +1043,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottom Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 8218881443150415746, guid: aa8fbfce6f98c384593b25b36e670086,
+        type: 3}
+      propertyPath: isInfoScene
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942207377012915818, guid: aa8fbfce6f98c384593b25b36e670086,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 99eaf71c99f87f24ea2c74cc11130d20,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa8fbfce6f98c384593b25b36e670086, type: 3}
 --- !u!224 &708302430 stripped

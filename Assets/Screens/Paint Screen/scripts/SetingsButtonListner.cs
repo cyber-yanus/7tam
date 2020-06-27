@@ -35,7 +35,5 @@ public class SetingsButtonListner : MonoBehaviour
             animation.Play("opne settings");
             isOpen = true;
         }
-
-        
     }
 }
