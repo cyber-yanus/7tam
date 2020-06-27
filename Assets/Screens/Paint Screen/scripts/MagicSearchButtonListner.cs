@@ -13,6 +13,8 @@ public class MagicSearchButtonListner : MonoBehaviour
     public Text textWithCost;
 
     public PlayerScriptableObject player;
+    public GameObject coloringBook;
+    public CurrentColoringBook currentColoringBook;
 
 
     // Start is called before the first frame update
@@ -45,6 +47,19 @@ public class MagicSearchButtonListner : MonoBehaviour
 
     private void activateMagicSearch()
     {
+        if (player.CurrentColor != null)
+        {
+            foreach (Vector2 startPoints in currentColoringBook.StartPoints[player.CurrentColorId].points)
+            {
+                int newX = (int)startPoints.x;
+                int newY = (int)startPoints.y;
+
+                if (newX != 0)
+                    StartCoroutine(coloringBook.GetComponent<Paint>().magicSearchPaintArea(newX, newY, player.CurrentColor));
+            }
+
+        }
+
         Debug.Log("activate magic search");
     }
 }

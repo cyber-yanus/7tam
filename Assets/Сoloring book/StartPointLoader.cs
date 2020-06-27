@@ -16,7 +16,7 @@ public class StartPointLoader : MonoBehaviour
     private void Awake()
     {
 #if UNITY_ANDROID && !UNITY_EDITOR
-        savePath = Path.Combine(Application.persistentDataPath, saveFileName);
+       // savePath = Path.Combine(Application.persistentDataPath, saveFileName);
 #else
         savePath = Path.Combine(Application.dataPath, saveFileName);
 #endif
@@ -65,15 +65,4 @@ public class StartPointLoader : MonoBehaviour
         }
     }
 
-
-    private void OnApplicationQuit()
-    {
-        //saveToFile();
-    }
-
-    private void OnApplicationPause(bool pause)
-    {
-        //if (Application.platform == RuntimePlatform.Android)
-          //  saveToFile();   
-    }
 }

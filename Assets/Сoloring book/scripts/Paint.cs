@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Paint : MonoBehaviour, IPointerClickHandler
@@ -62,11 +63,34 @@ public class Paint : MonoBehaviour, IPointerClickHandler
     public void magicStickPaintArea(float x, float y, Color color)
     {
         
-        int newX = (int)x;//localWidth - (int)x;
+        int newX = (int)x;
         int newY = (int)localHeight - (int)y;
 
-        svg.sprite.FloodFillArea(newX, newY, color);
-        svg.sprite.texture.Apply();
+
+        if (checkBust(newX, newY, color))
+        {
+            svg.sprite.FloodFillArea(newX, newY, color);
+            svg.sprite.texture.Apply();
+        }
+        
+    }
+
+    public IEnumerator magicSearchPaintArea(float x, float y, Color color)
+    {
+        int newX = (int)x;
+        int newY = (int)localHeight - (int)y;
+
+        if (checkBust(newX, newY, color))
+        {
+            svg.sprite.FloodFillArea(newX, newY, color);
+            svg.sprite.texture.Apply();
+
+            yield return new WaitForSeconds(0.5f);
+
+            color.a = 0;
+            svg.sprite.FloodFillArea(newX, newY, color);
+            svg.sprite.texture.Apply();
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -92,6 +116,17 @@ public class Paint : MonoBehaviour, IPointerClickHandler
             }
         }
 
+
+    }
+
+    private bool checkBust(int aX, int aY, Color color)
+    {
+        int colotingBookW = svg.sprite.texture.width;
+
+        Color[] coloringBookColors = svg.sprite.texture.GetPixels();
+        Color refCol = coloringBookColors[aX + aY * colotingBookW];
+
+        return refCol == color ? false : true;
 
     }
 

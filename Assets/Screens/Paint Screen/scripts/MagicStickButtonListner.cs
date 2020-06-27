@@ -52,14 +52,12 @@ public class MagicStickButtonListner : MonoBehaviour
 
         if (player.CurrentColor != null)
         {
-            Debug.Log(currentColoringBook.StartPoints[player.CurrentColorId].points.Length);
-
             foreach (Vector2 startPoints in currentColoringBook.StartPoints[player.CurrentColorId].points)
             {
                 int newX = (int)startPoints.x;
                 int newY = (int)startPoints.y;
 
-                if (newX != 0)
+                if(newY != 0)
                     coloringBook.GetComponent<Paint>().magicStickPaintArea(newX, newY, player.CurrentColor);
             }
 
@@ -67,6 +65,5 @@ public class MagicStickButtonListner : MonoBehaviour
 
         Debug.Log("activate magic stick");
     }
-
 
 }

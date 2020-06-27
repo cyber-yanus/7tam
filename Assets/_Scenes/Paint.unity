@@ -2917,7 +2917,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1493726711}
   - component: {fileID: 1493726714}
-  - component: {fileID: 1493726712}
   - component: {fileID: 1493726713}
   m_Layer: 5
   m_Name: coloring book text
@@ -2945,32 +2944,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!61 &1493726712
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493726710}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 1
-  m_Offset: {x: 0, y: -4.65979}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 1
-  serializedVersion: 2
-  m_Size: {x: 1088.4392, y: 1218.6714}
-  m_EdgeRadius: 0
 --- !u!114 &1493726713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4011,6 +3984,9 @@ MonoBehaviour:
   trainGameObject: {fileID: 1942241870}
   textWithCost: {fileID: 1994523158}
   player: {fileID: 11400000, guid: ceb37bd7228ec4146bb1f026f0d297cf, type: 2}
+  coloringBook: {fileID: 1661028493}
+  currentColoringBook: {fileID: 11400000, guid: 905030ead48248f4280aa400e7cb1a03,
+    type: 2}
 --- !u!1 &1746623227
 GameObject:
   m_ObjectHideFlags: 0
