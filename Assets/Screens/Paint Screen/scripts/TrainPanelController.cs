@@ -19,7 +19,7 @@ public class TrainPanelController : MonoBehaviour
         maxContentX = - (contentW + contentW / 3) * 2;
         Debug.Log(maxContentX);
 
-        minContentX = contentW / 3;
+        minContentX = contentW / 4;
         Debug.Log(minContentX);
 
     }

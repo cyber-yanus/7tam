@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-
 using System.IO;
 
 public class StartPointLoader : MonoBehaviour
@@ -9,18 +8,18 @@ public class StartPointLoader : MonoBehaviour
 
 
     [SerializeField] private string savePath;
-    [SerializeField] private string saveFileName = "points.json";
+    [SerializeField] private string saveFileName = "pointus.json";
 
     public StartPoints[] StartPoints1 { get => StartPoints; set => StartPoints = value; }
 
     private void Awake()
     {
 #if UNITY_ANDROID && !UNITY_EDITOR
-       // savePath = Path.Combine(Application.persistentDataPath, saveFileName);
+        savePath = Path.Combine(Application.persistentDataPath, saveFileName);
 #else
         savePath = Path.Combine(Application.dataPath, saveFileName);
 #endif
-
+        
         loadFromFile();
     }
 

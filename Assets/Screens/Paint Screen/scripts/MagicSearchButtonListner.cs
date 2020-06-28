@@ -1,11 +1,9 @@
-﻿using DanielLochner.Assets.SimpleScrollSnap;
-using System;
+﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MagicSearchButtonListner : MonoBehaviour
 {
-    private Button button;
     private string saveName = "magic search train";
 
     public GameObject trainGameObject;
@@ -20,7 +18,7 @@ public class MagicSearchButtonListner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        button = GetComponent<Button>();
+        Button button = GetComponent<Button>();
 
         button.onClick.AddListener(execute);
     }
@@ -33,7 +31,6 @@ public class MagicSearchButtonListner : MonoBehaviour
 
             PlayerPrefs.SetString(saveName, "yes");
 
-            trainGameObject.GetComponent<SimpleScrollSnap>().startingPanel = 1;
             trainGameObject.SetActive(true);
         }
 
@@ -47,9 +44,10 @@ public class MagicSearchButtonListner : MonoBehaviour
 
     private void activateMagicSearch()
     {
+        
         if (player.CurrentColor != null)
         {
-            foreach (Vector2 startPoints in currentColoringBook.StartPoints[player.CurrentColorId].points)
+            foreach (Vector2 startPoints in currentColoringBook.ColoringBook.Pointus.StartPoints[player.CurrentColorId].points)
             {
                 int newX = (int)startPoints.x;
                 int newY = (int)startPoints.y;
@@ -59,7 +57,7 @@ public class MagicSearchButtonListner : MonoBehaviour
             }
 
         }
-
+        
         Debug.Log("activate magic search");
     }
 }

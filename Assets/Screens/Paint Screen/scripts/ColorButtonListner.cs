@@ -24,8 +24,6 @@ public class ColorButtonListner : MonoBehaviour
         player.CurrentColorId = Id;
 
         transform.parent.parent.GetComponent<ButtonsColorController>().selectButton(this.gameObject);
-
-
     }
 
 

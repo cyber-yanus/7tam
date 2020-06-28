@@ -1,10 +1,8 @@
-﻿using DanielLochner.Assets.SimpleScrollSnap;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class ZoomButtonListner : MonoBehaviour
 {
-    private Button button;
     private string saveName = "zoom train";
 
     public GameObject trainGameObject;
@@ -13,7 +11,7 @@ public class ZoomButtonListner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        button = GetComponent<Button>();
+        Button button = GetComponent<Button>();
 
         button.onClick.AddListener(execute);
     }
@@ -26,8 +24,6 @@ public class ZoomButtonListner : MonoBehaviour
 
             PlayerPrefs.SetString(saveName, "yes");
 
-
-            trainGameObject.GetComponent<SimpleScrollSnap>().startingPanel = 2;
             trainGameObject.SetActive(true);
         }
 

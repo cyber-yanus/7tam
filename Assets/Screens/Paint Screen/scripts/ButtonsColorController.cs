@@ -11,14 +11,31 @@ public class ButtonsColorController : MonoBehaviour
 
     public GameObject currentProgressbar;
 
+    private void Start()
+    {
+        loadProgressBar();
+    }
+
     public void upProgressBar()
     {
         if (currentProgressbar != null)
         {
-            currentProgressbar.GetComponent<ProgressBarController>().updateProgressBar();
+            int id = currentProgressbar.GetComponent<ProgressBarController>().progressBarId;
+
+            currentColoringBook.SavedProgressBarCount[id] = currentProgressbar.GetComponent<ProgressBarController>().updateProgressBar();
         }
     }
 
+    public void finishProgressBar()
+    {
+        if (currentProgressbar != null)
+        {
+            int id = currentProgressbar.GetComponent<ProgressBarController>().progressBarId;
+
+            currentColoringBook.SavedProgressBarCount[id] = currentProgressbar.GetComponent<ProgressBarController>().fin();
+
+        }
+    }
 
     public void addColorButton(GameObject button)
     {
@@ -42,5 +59,16 @@ public class ButtonsColorController : MonoBehaviour
         button.transform.localScale = new Vector3(0.005f, 0.005f, 0.005f);
         button.transform.parent.GetComponent<ProgressBarController>().distroyProgressBar();
 
+    }
+
+
+    public void loadProgressBar()
+    {
+        for (int i = 0; i < buttons.Count; i++)
+        {
+            float currentCount = currentColoringBook.SavedProgressBarCount[i];
+
+            buttons[i].transform.parent.GetComponent<ProgressBarController>().progressBarLoader(currentCount);
+        }
     }
 }

@@ -47,8 +47,8 @@ ScriptedImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 153
+        width: 1000
+        height: 597
       spriteID: 853191b2861b4a7428a1b6415f0daa14
       internalID: 0
     PhysicsOutlines: []

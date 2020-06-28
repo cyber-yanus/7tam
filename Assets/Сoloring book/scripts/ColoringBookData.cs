@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Coloring book/default coloting book", fileName ="New Coloring book")]
 public class ColoringBookData : ScriptableObject
 {
+
     [SerializeField]
     private Sprite coloringBookSprite;
 
@@ -14,7 +15,10 @@ public class ColoringBookData : ScriptableObject
 
     [SerializeField]
     private Sprite example;
-    
+
+    [SerializeField]
+    private Pointus pointus;
+
     [SerializeField]
     private List<Color> colors;
 
@@ -31,5 +35,5 @@ public class ColoringBookData : ScriptableObject
     public List<int> ColorsCount { get => colorsCount; set => colorsCount = value; }
     public List<Color> Colors { get => colors; set => colors = value; }
     public Sprite Example { get => example; set => example = value; }
-    
+    public Pointus Pointus { get => pointus; set => pointus = value; }
 }

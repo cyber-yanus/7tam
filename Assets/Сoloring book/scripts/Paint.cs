@@ -65,12 +65,13 @@ public class Paint : MonoBehaviour, IPointerClickHandler
         
         int newX = (int)x;
         int newY = (int)localHeight - (int)y;
-
-
+       
         if (checkBust(newX, newY, color))
         {
             svg.sprite.FloodFillArea(newX, newY, color);
-            svg.sprite.texture.Apply();
+            svg.sprite.texture.Apply();         
+
+            colorContent.GetComponent<ButtonsColorController>().finishProgressBar();
         }
         
     }
@@ -107,7 +108,7 @@ public class Paint : MonoBehaviour, IPointerClickHandler
         {
             if (rescaleX > 0 && rescaleX < localWidth)
             {
-                if (checkingForCompliance(rescaleX, rescaleY))
+                if (checkingForCompliance(rescaleX, rescaleY) && checkBust((int)rescaleX, (int)rescaleY, color))
                 {
                     colorContent.GetComponent<ButtonsColorController>().upProgressBar();
 

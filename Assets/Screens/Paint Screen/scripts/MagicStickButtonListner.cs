@@ -1,6 +1,5 @@
 ﻿using DanielLochner.Assets.SimpleScrollSnap;
 using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,13 +29,13 @@ public class MagicStickButtonListner : MonoBehaviour
 
     private void execute()
     {
+       
         if (PlayerPrefs.GetString(saveName).Equals(""))
         {
             Debug.Log("first use magic stick");
 
             PlayerPrefs.SetString(saveName, "yes");
 
-            trainGameObject.GetComponent<SimpleScrollSnap>().startingPanel = 0;
             trainGameObject.SetActive(true);
         }
 
@@ -52,7 +51,9 @@ public class MagicStickButtonListner : MonoBehaviour
 
         if (player.CurrentColor != null)
         {
-            foreach (Vector2 startPoints in currentColoringBook.StartPoints[player.CurrentColorId].points)
+
+
+            foreach (Vector2 startPoints in currentColoringBook.ColoringBook.Pointus.StartPoints[player.CurrentColorId].points)
             {
                 int newX = (int)startPoints.x;
                 int newY = (int)startPoints.y;

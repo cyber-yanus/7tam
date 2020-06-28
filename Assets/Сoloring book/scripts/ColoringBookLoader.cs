@@ -35,5 +35,6 @@ public class ColoringBookLoader : MonoBehaviour
 
         buttonColorCreator.create(colors, colorsNumber);
 
+        colorContentList.GetComponent<ButtonsColorController>().currentColoringBook = currentColoringBook.ColoringBook;
     }
 }

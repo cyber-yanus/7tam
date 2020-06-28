@@ -30,9 +30,18 @@ public class ProgressBarController : MonoBehaviour
         step = 1f / (float)colorsNumber;
     }
 
-    public void updateProgressBar()
+    public float updateProgressBar()
     {
-        progressBar.GetComponent<Image>().fillAmount += step;
+        return progressBar.GetComponent<Image>().fillAmount += step;
     }
 
+    public float fin()
+    {
+        return progressBar.GetComponent<Image>().fillAmount = 1;
+    }
+
+    public void progressBarLoader(float count)
+    {
+        progressBar.GetComponent<Image>().fillAmount = count;
+    }
 }

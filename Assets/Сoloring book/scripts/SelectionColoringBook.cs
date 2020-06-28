@@ -21,8 +21,6 @@ public class SelectionColoringBook : MonoBehaviour
     {
         currentColoringBook.ColoringBook = coloringBook;
 
-        currentColoringBook.StartPoints = GetComponent<StartPointLoader>().StartPoints1;
-
         SceneLoader.loadNewScene("Paint");
     }
 
